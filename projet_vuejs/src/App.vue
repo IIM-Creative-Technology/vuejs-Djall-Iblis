@@ -1,31 +1,11 @@
 <template>
-<!--  <img alt="Vue logo" src="./assets/logo.png">-->
-<!--  <HelloWorld msg="Welcome to Your Vue.js App"/>-->
-  <header_component></header_component>
-  <manage-page></manage-page>
-
-  <br>
-
-  <create-page></create-page>
-
+  <div id="nav">
+    <router-link to="/admin">Gérer le Blog</router-link> |
+    <router-link to="/blog">Blog</router-link> |
+    <router-link to="/">login</router-link>
+  </div>
+  <router-view/>
 </template>
-
-<script>
-// import HelloWorld from './components/HelloWorld.vue'
-import managePage from './components/managePage.vue'
-import header_component from './components/header_component.vue'
-import CreationPage from "./components/CreationPage"
-
-export default {
-  name: 'App',
-  components: {
-    // HelloWorld,
-    "manage-page": managePage,
-    header_component,
-    "create-page": CreationPage,
-  }
-}
-</script>
 
 <style>
 #app {
@@ -34,6 +14,23 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+}
+
+#nav {
+  padding: 30px;
+  text-align: start;
+}
+
+#nav a {
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+#nav a.router-link-exact-active {
+  color: #42b983;
 }
 </style>
+
+
+
+

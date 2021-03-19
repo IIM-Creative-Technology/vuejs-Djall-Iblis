@@ -6,7 +6,7 @@
       <div class="blocInfo">
         <p class="title">Titre de la page :</p>
         <label class="input">
-          <input type="text">
+          <input type="text" v-model="post.title">
         </label>
         <p class="title">Meta Title :</p>
         <label class="input">
@@ -28,13 +28,39 @@
     <div class="blocPostBody">
       <p class="title">Meta Description :</p>
       <label class="input">
-        <input type="textarea">
+        <textarea></textarea>
       </label>
     </div>
+
+    <button @click="addPost">Valider</button>
 
   </div>
 
 </template>
+
+<script>
+
+export default {
+  data() {
+    return {
+      post: {
+        title: "",
+        metaTitle: "",
+        metaDescritpion: "",
+        body: "",
+        image: "",
+      }
+    }
+  },
+  methods: {
+    addPost(){
+      this.$store.commit('addPost', this.post);
+      this.$router.push('admin');
+    }
+  }
+}
+
+</script>
 
 <style scoped>
 
@@ -87,5 +113,6 @@
   background-color: grey;
   padding-top: 5px;
 }
-
 </style>
+
+

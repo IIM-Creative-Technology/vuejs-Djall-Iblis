@@ -2,9 +2,12 @@ import { createStore } from 'vuex'
 
 export default createStore({
   state: {
-      text: "Lorem Ipsum"
+      postList: []
   },
   mutations: {
+    addPost(state, newPost) {
+      state.postList.push(newPost);
+    }
   },
   actions: {
   },

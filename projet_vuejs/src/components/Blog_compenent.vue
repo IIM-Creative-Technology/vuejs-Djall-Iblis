@@ -1,6 +1,4 @@
 <template>
-  <router-link to="/createNewPage" class="buttonCreate">Créer une page</router-link>
-
   <div class="content">
     <post image="logo.png" text="{{ text }}"></post>
     <post image="logo.png" text="Lorem Ipsum"></post>
@@ -13,23 +11,11 @@
 </template>
 
 <style scoped>
-  .buttonCreate {
-    width: 100%;
-    height: 50px;
-    text-align: end;
-    text-decoration: none;
-    color: black;
-    border: 2px solid grey;
-    background-color: lightgrey;
-    padding: 5px;
-  }
-
-  .content {
-    width: 80%;
-    margin: auto;
-    padding-top: 50px;
-
-  }
+.content {
+  width: 80%;
+  margin: auto;
+  padding-top: 50px;
+}
 
 </style>
 
