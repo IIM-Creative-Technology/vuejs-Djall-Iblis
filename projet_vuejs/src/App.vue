@@ -3,19 +3,26 @@
 <!--  <HelloWorld msg="Welcome to Your Vue.js App"/>-->
   <header_component></header_component>
   <manage-page></manage-page>
+
+  <br>
+
+  <create-page></create-page>
+
 </template>
 
 <script>
 // import HelloWorld from './components/HelloWorld.vue'
 import managePage from './components/managePage.vue'
 import header_component from './components/header_component.vue'
+import CreationPage from "./components/CreationPage"
 
 export default {
   name: 'App',
   components: {
     // HelloWorld,
-    managePage,
+    "manage-page": managePage,
     header_component,
+    "create-page": CreationPage,
   }
 }
 </script>
