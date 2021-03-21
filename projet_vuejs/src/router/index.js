@@ -1,7 +1,8 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
 import ManagePage from "@/components/managePage.vue"
-import Blog_compenent from "@/components/Blog_compenent";
+import Blog_compenent from "@/components/Blog_component";
 import CreationPage from "@/components/CreationPage";
+import DetailPost_component from "@/components/DetailPost_component";
 
 const routes = [
   {
@@ -18,6 +19,11 @@ const routes = [
     path: '/blog',
     name: 'blog',
     component: Blog_compenent
+  },
+  {
+    path: '/post/{{ item.metaTitle }}',
+    name: 'post',
+    component: DetailPost_component
   },
   {
     path: '/about',
